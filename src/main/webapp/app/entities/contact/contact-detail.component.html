@@ -1,0 +1,40 @@
+
+<div *ngIf="contact">
+    <h2><span jhiTranslate="serviceApp.contact.detail.title">Contact</span> {{contact.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="serviceApp.contact.firstName">First Name</span></dt>
+        <dd>
+            <span>{{contact.firstName}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.contact.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{contact.lastName}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.contact.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{contact.phoneNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.contact.services">Services</span></dt>
+        <dd>
+            <div *ngIf="contact.services">
+                <a [routerLink]="['/services', contact.services?.id]">{{contact.services?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'contact/'+ contact.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

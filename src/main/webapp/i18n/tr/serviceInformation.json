@@ -1,0 +1,27 @@
+
+{
+    "serviceApp": {
+        "serviceInformation" : {
+            "home": {
+                "title": "Service Informations",
+                "createLabel": "Create a new Service Information",
+                "createOrEditLabel": "Create or edit a Service Information"
+            },
+            "created": "A new Service Information is created with identifier {{ param }}",
+            "updated": "A Service Information is updated with identifier {{ param }}",
+            "deleted": "A Service Information is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Information {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Information"
+            },
+            "plate": "Plate",
+            "route": "Route",
+            "driverFirstName": "Driver First Name",
+            "driverSurname": "Driver Surname",
+            "driverPhoneNumber": "Driver Phone Number",
+            "carModel": "Car Model"
+        }
+    }
+}

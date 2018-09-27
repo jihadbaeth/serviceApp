@@ -1,0 +1,46 @@
+
+<div *ngIf="serviceInformation">
+    <h2><span jhiTranslate="serviceApp.serviceInformation.detail.title">Service Information</span> {{serviceInformation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="serviceApp.serviceInformation.plate">Plate</span></dt>
+        <dd>
+            <span>{{serviceInformation.plate}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.serviceInformation.route">Route</span></dt>
+        <dd>
+            <span>{{serviceInformation.route}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.serviceInformation.driverFirstName">Driver First Name</span></dt>
+        <dd>
+            <span>{{serviceInformation.driverFirstName}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.serviceInformation.driverSurname">Driver Surname</span></dt>
+        <dd>
+            <span>{{serviceInformation.driverSurname}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.serviceInformation.driverPhoneNumber">Driver Phone Number</span></dt>
+        <dd>
+            <span>{{serviceInformation.driverPhoneNumber}}</span>
+        </dd>
+        <dt><span jhiTranslate="serviceApp.serviceInformation.carModel">Car Model</span></dt>
+        <dd>
+            <span>{{serviceInformation.carModel}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'service-information/'+ serviceInformation.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

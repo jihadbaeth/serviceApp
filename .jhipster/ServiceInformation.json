@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "plate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "route",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverFirstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverSurname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "driverPhoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "carModel",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180927182910",
+    "entityTableName": "service_information",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

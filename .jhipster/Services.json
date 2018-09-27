@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "serviceInformation",
+            "otherEntityName": "serviceInformation",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "services"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "contact",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "services"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "serviceName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180927182909",
+    "entityTableName": "services",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
