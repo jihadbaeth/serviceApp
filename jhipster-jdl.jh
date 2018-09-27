@@ -1,0 +1,31 @@
+entity Services{
+	id Number,
+    serviceName String
+	
+}
+
+entity ServiceInformation{
+	plate String,
+    route String,
+    driverFirstName String,
+    driverSurname String,
+    driverPhoneNumber String,
+    carModel String
+}
+
+entity Contact{
+	firstName String,
+    lastName String,
+    phoneNumber String
+}
+
+
+relationship OneToOne{
+	Services{serviceInformation} to ServiceInformation
+}
+
+relationship OneToMany{
+	Services{contact} to Contact
+}
+
+
